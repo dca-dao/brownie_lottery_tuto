@@ -48,12 +48,8 @@ def end_lottery():
     print(f"{lottery.recentWinner()} is the new winner !")
 
 
-def get_winner():
-    account = get_account()
-    lottery = Lottery[-1]
-    # fund contract with Link Token
-    print(f"{lottery.recentWinner()} is the new winner !")
-
-
 def main():
-    get_winner()
+    deploy_lottery()
+    start_lottery()
+    enter_lottery()
+    end_lottery()
