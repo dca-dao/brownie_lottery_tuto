@@ -63,9 +63,6 @@ contract Lottery is VRFConsumerBase, Ownable {
         lottery_state = LOTTERY_STATE.CALCULATING_WINNER;
         // request randomness
         bytes32 requestId = requestRandomness(keyhash, fee);
-        // wait for the call to complete
-        // fulfilRandomness get called and random number get updated
-        // pay winner
     }
 
     // Internal because we want our VRFCoordinator to call this function
